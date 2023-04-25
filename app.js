@@ -38,3 +38,18 @@ body.append(h1, divCardContainer, script);
 html.append(head, body);
 
 document.documentElement.replaceWith(html);
+
+
+
+// array for card
+const movies = [
+    {
+        titre: "Iron man",
+        date: "30 avril 2008",
+        prod: "Marvel",
+        platforme: ["Disney+ , AppleTv"],
+        affiche : "",
+        teaser: "https://youtu.be/8ugaeA-nMTc",
+        genre: ["Super-héros"],
+      },
+];
