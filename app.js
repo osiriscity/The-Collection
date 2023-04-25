@@ -143,3 +143,5 @@ const movies = [
       genre: ["Animation , Action, Drame"],
     },
 ];
+
+for (let elem of movies);
