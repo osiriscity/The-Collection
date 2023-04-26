@@ -1,37 +1,37 @@
-const html = document.createElement('html');
-html.lang = 'en';
+// const html = document.createElement('html');
+// html.lang = 'en';
 
-const head = document.createElement('head');
+// const head = document.createElement('head');
 
-const metaCharset = document.createElement('meta');
-metaCharset.setAttribute('charset', "UTF-8");
+// const metaCharset = document.createElement('meta');
+// metaCharset.setAttribute('charset', "UTF-8");
 
-const metaCompat = document.createElement('meta');
-metaCompat.setAttribute('http-equiv', "X-UA-Compatible");
-metaCompat.setAttribute('content', "IE=edge");
+// const metaCompat = document.createElement('meta');
+// metaCompat.setAttribute('http-equiv', "X-UA-Compatible");
+// metaCompat.setAttribute('content', "IE=edge");
 
-const metaViewport = document.createElement('meta');
-metaViewport.setAttribute('name', "viewport");
-metaViewport.setAttribute('content', "width=device-width, initial-scale=1.0");
+// const metaViewport = document.createElement('meta');
+// metaViewport.setAttribute('name', "viewport");
+// metaViewport.setAttribute('content', "width=device-width, initial-scale=1.0");
 
-const linkStylesheet = document.createElement('link');
-linkStylesheet.setAttribute('rel', "stylesheet");
-linkStylesheet.setAttribute('href', "assets/style.css");
+// const linkStylesheet = document.createElement('link');
+// linkStylesheet.setAttribute('rel', "stylesheet");
+// linkStylesheet.setAttribute('href', "assets/style.css");
 
-const title = document.createElement('title');
-title.textContent = "The collection";
+// const title = document.createElement('title');
+// title.textContent = "The collection";
 
-const body = document.createElement('body');
+// const body = document.createElement('body');
 
-const h1 = document.createElement('h1');
-h1.textContent = "Movie Collection";
+// const h1 = document.createElement('h1');
+// h1.textContent = "Movie Collection";
 
-const divCardContainer = document.createElement('div');
-divCardContainer.setAttribute('id', "card-container");
+// const divCardContainer = document.createElement('div');
+// divCardContainer.setAttribute('id', "card-container");
 
-const script = document.createElement('script');
-script.setAttribute('defer', "");
-script.setAttribute('src', "app.js");
+// const script = document.createElement('script');
+// script.setAttribute('defer', "");
+// script.setAttribute('src', "app.js");
 
 head.append(metaCharset, metaCompat, metaViewport, linkStylesheet, title);
 body.append(h1, divCardContainer, script);
@@ -144,4 +144,58 @@ const movies = [
     },
 ];
 
-for (let elem of movies);
+for (let elem of movies){
+  let x = document.createElement("div");
+  x.className = "divCards";
+  divCardContainer.appendChild(x);
+
+  let divPictures = document.createElement("div");
+  divPictures.className = "divPictures";
+  x.appendChild(divPictures);
+  let pictures = document.createElement("img");
+  pictures.src = elem.affiche;
+  pictures.setAttribute("alt", "affiche");
+  divPictures.appendChild(pictures);
+
+  let title = document.createElement("h2");
+  title.textContent = elem["titre"];
+  x.appendChild(title);
+
+  let releaseYear = document.createElement("div");
+  releaseYear.className = "releaseYear";
+  x.appendChild(releaseYear);
+  let year = document.createElement("p");
+  year.textContent = elem["date"];
+  year.className = "year";
+
+  let divReal = document.createElement("div");
+  divReal.className = "divReal";
+  x.appendChild(divReal);
+  let realisation = document.createElement("p");
+  realisation.textContent = elem["realisateur"];
+  realisation.className = "realisation";
+  divReal.appendChild(realisation);
+
+  let whereToWatch = document.createElement("p");
+  whereToWatch.textContent = elem ["platforme"];
+  whereToWatch.className = "platforme";
+  x.appendChild(whereToWatch);
+
+  let divIcon = document.createElement("div");
+  divIcon.className = "divIcon";
+  x.appendChild(divIcon);
+  let trailer = document.createElement("a");
+  trailer.setAttribute("target", "_blank");
+  trailer.href = elem["teaser"];
+  divIcon.appendChild(trailer);
+  let icon = document.createElement("img")
+  icon.src = "./asset";
+  trailer.appendChild(icon);
+
+  let gender = document.createElement("p");
+  gender.textContent = elem["genre"];
+  gender.className = "gender";
+  x.appendChild(gender)
+};
+
+
