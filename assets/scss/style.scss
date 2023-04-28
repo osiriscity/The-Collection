@@ -15,6 +15,7 @@ body{
         font-weight: bolder;
         @include responsive-desktop{
             font-size: 100px;
+            color: aliceblue;
         }
     }
     .card-container {  
