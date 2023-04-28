@@ -3,6 +3,12 @@
 body {
   background-image: url(https://cdn.britannica.com/61/118661-050-6CAD9A11/Popcorn.jpg);
 }
+@media screen and (min-width: 900px) {
+  body {
+    background-image: url(https://www.cgrevents.com/sites/default/files/r3dd745250852ecc5ab0c08a25dc3439f_35.jpg);
+    background-size: cover;
+  }
+}
 body h1 {
   text-align: center;
   font-family: Raleway, sans-serif;
