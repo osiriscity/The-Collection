@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap");
+body {
+  background-image: url(https://cdn.britannica.com/61/118661-050-6CAD9A11/Popcorn.jpg);
+}
+body h1 {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: bolder;
+}
+body .card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 25px;
+  margin: 15px;
+}
+body .card-container .divCards {
+  display: grid;
+  text-align: center;
+  font-family: Asap, sans-serif;
+  background-color: rgb(10, 10, 10);
+  color: white;
+}
+body .card-container .divCards h2 {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+body .card-container .divCards .divPictures img {
+  width: 100%;
+  height: 100%;
+}
+body .card-container .divCards .divIcon a img {
+  width: 11%;
+}/*# sourceMappingURL=style.css.map */
